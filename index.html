@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#learning">Learning</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <h1>Lorenc Shehi</h1>
+        <p>gooner</p>
+        <a href="#contact" class="cta-button">Get In Touch</a>
+    </section>
+
+    <section id="skills">
+        <h2>Skills & Technologies</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚛️</div>
+                <h3>React</h3>
+            </div>
+            <div class="skill-card">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🟢</div>
+                <h3>Node.js</h3>
+            </div>
+            <div class="skill-card">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🐍</div>
+                <h3>Python</h3>
+            </div>
+            <div class="skill-card">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🗄️</div>
+                <h3>SQL</h3>
+            </div>
+            <div class="skill-card">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🤖</div>
+                <h3>AI/ML</h3>
+            </div>
+            <div class="skill-card">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">☁️</div>
+                <h3>AWS</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="learning">
+        <h2>Currently Learning</h2>
+        <ul class="learning-list">
+        <div class="skill-card">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚛️</div>
+            <h3>PyTorch</h3>
+        <li>Machine Learning with Python</li>
+        <li>Cloud Architecture on AWS</li>
+        <li>GraphQL API Development</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">🚀</div>
+                <div class="project-content">
+                    <h3>Lorentz's Theory</h3>
+                        <p>game.</p>
+                        <div class="project-tags">
+                        <div class="tag">Finished</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">📱</div>
+                <div class="project-content">
+                    <h3>Number Classifer</h3>
+                    <p>in progress school project. number classification model built with PyTorch</p>
+                        <div class="project-tags">
+                        <div class="tag">In Progress</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="videos">
+        <h2>Video Content</h2>
+        <div class="videos-grid">
+            <div class="video-card">
+                <div class="video-thumbnail">▶️</div>
+                <div class="video-info">
+                    <h3>Building Scalable APIs</h3>
+                    <p>A comprehensive guide to designing and implementing RESTful APIs that can handle millions of requests.</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-thumbnail">▶️</div>
+                <div class="video-info">
+                    <h3>React Performance Tips</h3>
+                    <p>Learn optimization techniques to make your React applications lightning fast and responsive.</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-thumbnail">▶️</div>
+                <div class="video-info">
+                    <h3>AI Integration Tutorial</h3>
+                    <p>Step-by-step walkthrough of integrating machine learning models into production applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 John Developer. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Message sent! (This is a demo - no actual email was sent)');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

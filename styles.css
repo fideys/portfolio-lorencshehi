@@ -126,10 +126,13 @@ h2 {
     overflow: hidden;
     border: 1px solid #27272a;
     transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .project-card:hover {
-    transform: translateY(-2px) scale(0.92);
+    transform: translateY(-2px) scale(0.98);
     box-shadow: 0 20px 40px #721212;
 }
 
@@ -149,6 +152,7 @@ h2 {
     flex-wrap: wrap;
     margin-top: 1rem;
 }
+
 .tag {
     background: #27272a;
     color: #e4e4e7;
@@ -178,6 +182,9 @@ h2 {
     overflow: hidden;
     border: 1px solid #27272a;
     transition: transform 0.3s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .video-card:hover {

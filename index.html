@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer Portfolio</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="favicon.jpg">
+    <link rel="icon" type="image/x-icon" href="images/favicon.jpg">
 </head>
 <body>
     <nav>
@@ -15,42 +15,66 @@
             <li><a href="#learning">Learning</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#videos">Videos</a></li>
-            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <section id="home" class="hero">
         <h1>Lorenc Shehi</h1>
-        <p>gooner</p>
-        <a href="#contact" class="cta-button">Get In Touch</a>
+        <p>Semi-functional programmer</p>
+        <a href="mailto:lorencshehi@gmx.ch" class="cta-button">Get in Touch</a>
     </section>
 
     <section id="skills">
         <h2>Skills & Technologies</h2>
-        <div class="skills-grid">
+        <div class="skills-list">
             <div class="skill-card">
-                <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚛️</div>
-                <h3>React</h3>
+                <div class="skill-header">
+                    <h3>Teamwork</h3>
+                    <div class="skill-percent">70%</div>
+                </div>
+                <div class="progress" data-percent="70">
+                    <div class="progress-fill" style="width:0%"></div>
+                </div>
             </div>
+
             <div class="skill-card">
-                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🟢</div>
-                <h3>Node.js</h3>
+                <div class="skill-header">
+                    <h3>English</h3>
+                    <div class="skill-percent">90%</div>
+                </div>
+                <div class="progress" data-percent="90">
+                    <div class="progress-fill" style="width:0%"></div>
+                </div>
             </div>
+
             <div class="skill-card">
-                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🐍</div>
-                <h3>Python</h3>
+                <div class="skill-header">
+                    <h3>Microsoft Office</h3>
+                    <div class="skill-percent">70%</div>
+                </div>
+                <div class="progress" data-percent="70">
+                    <div class="progress-fill" style="width:0%"></div>
+                </div>
             </div>
+
             <div class="skill-card">
-                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🗄️</div>
-                <h3>SQL</h3>
+                <div class="skill-header">
+                    <h3>AI/ML</h3>
+                    <div class="skill-percent">50%</div>
+                </div>
+                <div class="progress" data-percent="50">
+                    <div class="progress-fill" style="width:0%"></div>
+                </div>
             </div>
+
             <div class="skill-card">
-                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🤖</div>
-                <h3>AI/ML</h3>
-            </div>
-            <div class="skill-card">
-                <div style="font-size: 2rem; margin-bottom: 0.5rem;">☁️</div>
-                <h3>AWS</h3>
+                <div class="skill-header">
+                    <h3>Windows</h3>
+                    <div class="skill-percent">70%</div>
+                </div>
+                <div class="progress" data-percent="70">
+                    <div class="progress-fill" style="width:0%"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -116,42 +140,7 @@
                     <p>A quick 5 minute overview of image models in AI.</p>
                 </div>
             </a>
-
-            <a href="https://youtube.com/example2" class="video-card">
-                <div class="video-thumbnail">▶️</div>
-                <div class="video-info">
-                    <h3>React Performance Tips</h3>
-                    <p>Learn optimization techniques to make your React applications lightning fast and responsive.</p>
-                </div>
-            </a>
-
-            <a href="https://youtube.com/example3" class="video-card">
-                <div class="video-thumbnail">▶️</div>
-                <div class="video-info">
-                    <h3>AI Integration Tutorial</h3>
-                    <p>Step-by-step walkthrough of integrating machine learning models into production applications.</p>
-                </div>
-            </a>
         </div>
-    </section>
-
-    <section id="contact">
-        <h2>Get In Touch</h2>
-        <form class="contact-form">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
-            </div>
-            <button type="submit">Send Message</button>
-        </form>
     </section>
 
     <footer>
@@ -168,10 +157,14 @@
             });
         });
 
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Message sent! (This is a demo - no actual email was sent)');
-            this.reset();
+        // Animate skill progress fills from data-percent
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.progress').forEach(track => {
+                const pct = track.getAttribute('data-percent') || '0';
+                const fill = track.querySelector('.progress-fill');
+                // small timeout to allow transition
+                setTimeout(() => { fill.style.width = pct + '%'; }, 100);
+            });
         });
     </script>
 </body>

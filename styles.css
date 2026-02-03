@@ -9,11 +9,11 @@ body {
     line-height: 1.6;
     color: #ffffff;
     background-color: #09090b;
-    background-image: url('images/darkgreygrid.png');
+    background-image: url("images/darkgreygrid.png");
     background-repeat: repeat;
     background-attachment: scroll;
-    background-size: 20px 20px;
-    background-blend-mode: lighten;
+    background-size: 50px 50px;
+    background-blend-mode: normal;
 }
 
 nav {

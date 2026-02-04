@@ -1,3 +1,2 @@
-work in progress portfolio
-
-partially vibecoded, but i'm replacing those parts
+portfolio
+will expand when there's more content to add
